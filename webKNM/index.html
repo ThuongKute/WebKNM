@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Tìm kiếm phòng trọ</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!--enable mobile device-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--fontawesome css-->
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <!--bootstrap css-->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!--animate css-->
+      <link rel="stylesheet" href="css/animate-wow.css">
+      <!--main css-->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/bootstrap-select.min.css">
+      <link rel="stylesheet" href="css/slick.min.css">
+      <link rel="stylesheet" href="css/jquery-ui.css">
+      <!--responsive css-->
+      <link rel="stylesheet" href="css/responsive.css">
+   </head>
+   <body>
+      <header id="header" class="top-head">
+         <!-- Static navbar -->
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-4 col-sm-12 left-rs">
+                     <div class="navbar-header">
+                        <button type="button" id="top-menu" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"> 
+                        <span class="sr-only">Toggle navigation</span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        </button>
+                        <a href="index.html" class="navbar-brand"><img src="images/logo.png" alt="" /></a>
+                     </div>
+                     <form class="navbar-form navbar-left web-sh">
+                        <div class="form">
+                           <input type="text" class="form-control" placeholder="Tìm kiếm phòng trọ">
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-md-8 col-sm-12">
+                     <div class="right-nav">
+                        <div class="login-sr">
+                           <div class="login-signup">
+                              <ul>
+                                 <li><a href="#">Đăng nhập</a></li>
+                                 <li><a class="custom-b" href="#">Đăng kí</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="help-r hidden-xs">
+                           <div class="help-box">
+                              <ul>
+                                 <li> <a data-toggle="modal" data-target="#myModal" href="#"> <span></span> <img src="images/flag.png" alt="" /> </a> </li>
+                                 <li> <a href="#"><img class="h-i" src="images/help-icon.png" alt="" /> Help </a> </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="nav-b hidden-xs">
+                           <div class="nav-box">
+                              <ul>
+                                 <li><a href="category.html">Tham quan</a></li>
+                                 <li><a href="#">Liên hệ</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--/.container-fluid --> 
+         </nav>
+      </header>
+      <!-- Modal -->
+      
+      <div id="sidebar" class="top-nav">
+         <ul id="sidebar-nav" class="sidebar-nav">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">MOTEL</a></li>
+            <li><a href="#">CONTACT</a></li>
+         </ul>
+      </div>
+     
+      <div class="furniture-box">
+         <div class="container">
+            <div class="row">
+               <div class="furniture-main">
+                  <h2>Tham quan</h2>
+                  <div class="col-md-3 col-sm-4">
+                     <div class="furniture-left">
+                        <h3>Lọc</h3>
+                        <div class="by-box">
+                           <h5>Theo giá (triệu đồng)</h5>
+                           <div id="slider-range"></div>
+                           <p>
+                              <input type="text" id="amount" readonly style="">
+                           </p>
+                        </div>
+                        <div class="by-com">
+                           <h5>Theo vị trí</h5>
+                           <div class="list-b">
+                              <div id="boxscroll">
+                                 <div class="form-check">
+                                    <input id="checkbox1" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox1">
+                                    Hải Châu
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox2" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox2">
+                                    Liên Chiểu
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox3" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox3">
+                                    Cẩm Lệ
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox4" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox4">
+                                    Thanh Khê
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox5" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox5">
+                                    Sơn Trà
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox6" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox6">
+                                    Ngũ Hành Sơn
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox7" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox7">
+                                    Hòa Vang
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="left-list-f">
+                           <div class="panel-group" id="accordion">
+                              <div class="panel panel-default">
+                                 <div class="panel-heading">
+                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                       <a href="#">Sắp xếp theo</a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body">Giá từ cao đến thấp</div>
+                                    <div class="panel-body">Giá từ thấp đến cao</div>
+                                    <div class="panel-body">Diện tích từ nhỏ đến lớn</div>
+                                    <div class="panel-body">Diện tích từ lớn đến nhỏ</div>
+                                 </div>
+                              </div>
+                              <div class="panel panel-default">
+                                 <div class="panel-heading">
+                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="panel-title expand">
+                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                       <a href="#">Loại trọ</a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapse2" class="panel-collapse collapse">
+                                    <div class="panel-body">Trọ tập thể</div>
+                                    <div class="panel-body">Trọ chung chủ</div>
+                                    <div class="panel-body">Căn hộ cho thuê</div>
+                                 </div>
+                              </div>
+                              <div class="panel panel-default">
+                                 <div class="panel-heading">
+                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="panel-title expand">
+                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                       <a href="#">Kiểu</a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapse3" class="panel-collapse collapse">
+                                    <div class="panel-body">Cấp 4</div>
+                                    <div class="panel-body">Cao tầng</div>
+                                    <div class="panel-body">Chung cư</div>
+                                 </div>
+                              </div>
+                              <div class="panel panel-default">
+                                 <div class="panel-heading">
+                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="panel-title expand">
+                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                       <a href="#">Địa thế</a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapse4" class="panel-collapse collapse">
+                                    <div class="panel-body">Mặt tiền</div>
+                                    <div class="panel-body">Trong kiệt</div>
+                                    <div class="panel-body">Trong hẻm</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 col-sm-8">
+                     <div class="furniture-middle">
+                        <div class="big-box">
+                           <div class="big-img-box">
+                              <img src="images\phongtro02.png" alt="#" />
+                           </div>
+                           <div class="big-dit-b clearfix">
+                              <div class="col-md-6">
+                                 <div class="left-big">
+                                    <h3>Trọ sinh viên 18m2 - 320 Trần Đại Nghĩa</h3>
+                                    <p>Người đăng: <span>Trương Thị Thương</span></p>
+                                    <div class="prod-btn">
+                                       <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Lưu tin</a>
+                                       <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
+                                       <p>23 likes</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="right-big-b">
+                                    <div class="tight-btn-b clearfix">
+                                       <a class="view-btn" href="productpage.html">Xem</a>
+                                       <a href="#">2.2 triệu đồng</a>
+                                    </div>
+                                    <div class="like-list">
+                                       <ul>
+                                          <li>
+                                             <div class="im-b"><img class="" src="images/list-img-01.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-02.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-03.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-04.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-05.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-06.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row cat-pd">
+                           <div class="col-md-6 col-sm-6">
+                              <div class="small-box-c">
+                                 <div class="small-img-b">
+                                    <img src="images\phongtro1.png" alt="#" />
+                                 </div>
+                                 <div class="dit-t clearfix">
+                                    <div class="left-ti">
+                                       <h4>Trọ K43/34 Trưng Nữ Vương</h4>
+                                       <p>Người đăng <span>Văn A</span></p>
+                                    </div>
+                                    <a href="#" tabindex="0">2 triệu đồng</a>
+                                 </div>
+                                 <div class="prod-btn">
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Lưu tin</a>
+                                    <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
+                                    <p>23 likes</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6">
+                              <div class="small-box-c">
+                                 <div class="small-img-b">
+                                    <img src="images\chungcu7.png" alt="#" />
+                                 </div>
+                                 <div class="dit-t clearfix">
+                                    <div class="left-ti">
+                                       <h4>Căn hộ 67/98 Điện Biên Phủ- Thanh Khê</h4>
+                                       <p>Người đăng <span>Văn A</span> </p>
+                                    </div>
+                                    <a href="#" tabindex="0">3.5 triệu đồng</a>
+                                 </div>
+                                 <div class="prod-btn">
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Lưu tin</a>
+                                    <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
+                                    <p>23 likes</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="big-box">
+                           <div class="big-img-box">
+                              <img src="images\chungcu8.png" alt="" />
+                           </div>
+                           <div class="big-dit-b clearfix">
+                              <div class="col-md-6">
+                                 <div class="left-big">
+                                    <h3>Căn hộ cho thuê Khu đô thị FPT</h3>
+                                    <p>Người đăng<span> FPT</span></p>
+                                    <div class="prod-btn">
+                                       <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Lưu tin</a>
+                                       <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
+                                       <p>22 likes</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="right-big-b">
+                                    <div class="tight-btn-b clearfix">
+                                       <a class="view-btn" href="#">Xem</a>
+                                       <a href="#">6 triệu đồng</a>
+                                    </div>
+                                    <div class="like-list">
+                                       <ul>
+                                          <li>
+                                             <div class="im-b"><img class="" src="images/list-img-01.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-02.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-03.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-04.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-05.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-06.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row cat-pd">
+                           <div class="col-md-6 col-sm-6">
+                              <div class="small-box-c">
+                                 <div class="small-img-b">
+                                    <img src="images\phongtro08.png" alt="#" />
+                                 </div>
+                                 <div class="dit-t clearfix">
+                                    <div class="left-ti">
+                                       <h4>Trọ 72 Khuê Đông - Ngũ Hành Sơn 15m2</h4>
+                                       <p>Người đăng: <span>Thương</span></p>
+                                    </div>
+                                    <a href="#" tabindex="0">2.3 triệu đồng</a>
+                                 </div>
+                                 <div class="prod-btn">
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Lưu tin</a>
+                                    <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
+                                    <p>23 likes</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6">
+                              <div class="small-box-c">
+                                 <div class="small-img-b">
+                                    <img src="images\phongtro09.png" alt="#" />
+                                 </div>
+                                 <div class="dit-t clearfix">
+                                    <div class="left-ti">
+                                       <h4>Trọ 16m2 có gác lửng 80 Phước Tường 3</h4>
+                                       <p>Người đăng: <span>Văn B</span></p>
+                                    </div>
+                                    <a href="#" tabindex="0">2.5 triệu đồng</a>
+                                 </div>
+                                 <div class="prod-btn">
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Lưu tin</a>
+                                    <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
+                                    <p>23 likes</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 hidden-xs">
+                     <div class="furniture-right">
+                        <h3>Nội thất, dịch vụ</h3>
+                        <div class="right-list-f">
+                           <ul>
+                              <li><a href="#"><img width="32" src="images/product/1.png" alt="#" /> Bàn ghế</a></li>
+                              <li><a href="#"><img width="32" src="images/product/2.png" alt="#" /> Bếp</a></li>
+                              <li><a href="#"><img width="32" src="images/product/3.png" alt="" /> Giường</a></li>
+                              <li><a href="#"><img width="32" src="images/product/4.png" alt="" /> Tủ lạnh</a></li>
+                              <li><a href="#"><img width="32" src="images/product/5.png" alt="" /> Tivi</a></li>
+                              <li><a href="#"><img width="32" src="images/product/6.png" alt="" /> Điều hòa</a></li>
+                              <li><a href="#"><img width="32" src="images/product/7.png" alt="" /> Bình nóng lạnh</a></li>
+                              <li><a href="#"><img width="32" src="images/product/8.png" alt="" /> Quạt</a></li>
+                              <li><a href="#"><img width="32" src="images/product/9.png" alt="" /> Tủ quần áo</a></li>
+                              <li><a href="#"><img width="32" src="images/product/10.png" alt="" /> Khóa thông minh</a></li>
+                              <li><a href="#"><img width="32" src="images/product/11.png" alt="" /> Camera giám sát</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="loding-box">
+                     <a href="#">
+                        <div class="sk-wave">
+                           <div class="sk-rect sk-rect1"></div>
+                           <div class="sk-rect sk-rect2"></div>
+                           <div class="sk-rect sk-rect3"></div>
+                           <div class="sk-rect sk-rect4"></div>
+                           <div class="sk-rect sk-rect5"></div>
+                        </div>
+                        <span>Đang tải thêm tin ...</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <div class="main-footer">
+            <div class="container">
+               <div class="row">
+                  <div class="footer-top clearfix">
+                     <div class="col-md-2 col-sm-6">
+                        <h2>
+                        </h2>
+                     </div>
+                     <div class="col-md-6 col-sm-6">
+                        <div class="form-box">
+                           <input type="text" placeholder="Email liên hệ" />
+                           <button>Tiếp tục</button>
+                        </div>
+                     </div>
+                     <div class="col-md-4 col-sm-12">
+                        <div class="help-box-f">
+                           <h4>Bạn đang gặp khó khăn?</h4>
+                              <h4> Hãy gọi theo số 12 34 56 78 để được giúp đỡ !</h4>
+                           
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8">
+                     <p><img width="90" src="images/logo.png" alt="#" style="margin-top: -5px;" /> © 2018</p>
+                  </div>
+                  <div class="col-md-4">
+                     <ul class="list-inline socials">
+                        <li>
+                           <a href="">
+                           <i class="fa fa-facebook" aria-hidden="true"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                           <i class="fa fa-twitter" aria-hidden="true"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                           <i class="fa fa-instagram" aria-hidden="true"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-linkedin" aria-hidden="true"></i>
+                           </a>
+                        </li>
+                     </ul>
+                     <ul class="right-flag">
+                        <li><a href="#"><img src="images/flag.png" alt="" /> </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--main js--> 
+      <script src="js/jquery-1.12.4.min.js"></script> 
+      <!--bootstrap js--> 
+      <script src="js/bootstrap.min.js"></script> 
+      <script src="js/bootstrap-select.min.js"></script>
+      <script src="js/slick.min.js"></script> 
+      <script src="js/jquery-ui.js"></script> 
+      <script src="js/wow.min.js"></script>
+      <!--custom js--> 
+      <script src="js/custom.js"></script>
+      <script>
+         $( function() {
+         	$( "#slider-range" ).slider({
+         		range: true,
+         		min: 0,
+         		max: 10,
+         		values: [ 158, 1230 ],
+         		slide: function( event, ui ) {
+         			$( "#amount" ).val(  ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+         		}
+         	});
+         	$( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
+         		" - " + $( "#slider-range" ).slider( "values", 1 ) );
+         } );
+      </script>
+      <script src="js/jquery.nicescroll.min.js"></script> 
+      <script>
+         $(document).ready(function() {
+           $("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#ededed",boxzoom:true}); // First scrollable DIV
+         });
+      </script>
+   </body>
+</html>
